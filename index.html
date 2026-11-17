@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
+    <meta
+      name="description"
+      content="AlertAR reúne alertas oficiales y reportes ciudadanos, los ubica según tu zona y suma prevención para que actúes a tiempo."
+    />
+    <meta name="theme-color" content="#021528" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="AlertAR" />
+    <meta property="og:title" content="AlertAR – Prepararse hace la diferencia" />
+    <meta
+      property="og:description"
+      content="Alertas oficiales y reportes de tu zona, en un solo lugar y siempre al día."
+    />
+    <meta property="og:url" content="https://alertarapp.com.ar/" />
+    <meta property="og:image" content="https://alertarapp.com.ar/assets/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <noscript
+      ><style>
+        #loc,
+        #sky {
+          display: none;
+        }
+        body.lock {
+          overflow: auto;
+          height: auto;
+        }
+        body.lock .copy,
+        body.lock .stage {
+          opacity: 1;
+          transform: none;
+        }
+      </style></noscript
+    >
+    <title>AlertAR – Prepararse hace la diferencia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+      <link rel="canonical" href="https://alertarapp.com.ar/" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://alertarapp.com.ar/#org", "name": "AlertAR", "url": "https://alertarapp.com.ar/", "logo": "https://alertarapp.com.ar/assets/logo-alertar.png"}, {"@type": "WebSite", "@id": "https://alertarapp.com.ar/#site", "url": "https://alertarapp.com.ar/", "name": "AlertAR", "inLanguage": "es-AR", "publisher": {"@id": "https://alertarapp.com.ar/#org"}}]}</script>
+  </head>
+  <body class="lock">
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <g id="mapg">
+          <rect x="-50" y="-50" width="1900" height="1500" style="fill: var(--bg)" />
+          <g style="fill: none; stroke: var(--str)" stroke-linecap="round">
+            <path
+              stroke-width="9"
+              d="M-55 197L199 -57M-56 366L64 245M131 178L368 -58M-53 495L129 311M188 252L497 -55M-55 621L623 -57M-55 890L892 -57M-55 1017L1019 -57M-57 1142L410 674M515 570L1144 -59M-55 1314L473 785M578 680L1316 -57M58 1456L1571 -56M185 1456L736 906M841 801L1699 -56M351 1453L1858 -53M465 1453L1858 60M705 1453L854 1304M1568 590L1858 300M1749 559L1856 453M-57 1346L55 1459M-59 1178L216 1454M-54 1032L369 1456M-56 878L523 1458M-57 554L776 1388M-57 412L840 1310M-56 270L904 1232M-53 140L964 1158M60 -58L537 418M630 510L1107 987M211 -54L1166 900M383 -55L1245 806M525 -56L1310 728M852 -58L1285 374M1337 426L1510 598M979 -58L1300 263M1389 351L1615 578M1119 -56L1734 558M1288 -56L1854 509M1517 -58L1856 280M1655 -55L1853 142M1797 -55L1853 0"
+            />
+            <path
+              stroke-width="15"
+              d="M-56 40L42 -58M-56 733L189 486M308 368L735 -58M-56 1426L1428 -58M583 1458L1030 1011M1111 929L1311 729M1431 609L1856 185M-57 709L692 1459M-57 -25L1038 1070M691 -53L1377 632M1400 -55L1853 397"
+            />
+            <path
+              stroke-width="6"
+              d="M1387 636L1651 580M1275 783L1852 661M1202 871L1498 809M1579 791L1857 732M1146 946L1850 796M1081 1025L1449 947M1553 925L1854 861M1033 1089L1280 1037M1362 1019L1855 915M952 1187L1283 1117M1412 1089L1852 996M807 1369L1853 1147M754 1458L1859 1223M1030 1459L1852 1284M1347 1458L1856 1350M1654 1458L1859 1415M801 1375L817 1453M841 1325L868 1452M885 1275L922 1451M990 1140L1057 1453M1045 1067L1128 1459M1109 992L1163 1247M1187 1360L1207 1452M1161 930L1273 1458M1217 857L1278 1143M1305 1269L1344 1454M1278 783L1360 1169M1383 1274L1422 1458M1375 660L1543 1452M1444 614L1623 1456M1505 612L1612 1111M1640 1243L1684 1453M1572 597L1755 1458M1639 583L1825 1454M1697 581L1859 1344M1835 552L1858 659"
+            />
+            <path
+              stroke-width="10"
+              d="M1322 717L1851 605M880 1279L1858 1071M927 1215L977 1450M1316 734L1470 1458M1772 565L1859 976"
+            />
+            <path
+              stroke-width="5"
+              d="M1229 864C1224 761 1343 732 1466 774M1539 1030C1663 946 1710 900 1759 950M1778 954C1726 947 1665 999 1726 924M1192 1170C1315 1202 1296 1307 1158 1210M1623 987C1495 997 1633 1001 1591 912M1056 1329C1054 1425 929 1368 803 1345M1325 914C1200 812 1332 741 1334 720"
+            />
+          </g>
+          <g style="fill: none; stroke: var(--av)" stroke-linecap="round">
+            <path stroke-width="26" d="M-60 800C500 760 1100 700 1900 540" />
+            <path stroke-width="24" d="M700 1480L1400 620" />
+            <path stroke-width="40" d="M250 1480L560 -80" />
+            <path stroke-width="22" d="M-60 220L900 1500" />
+          </g>
+          <path d="M250 1480L560 -80" style="fill: none; stroke: var(--bg); stroke-width: 3" />
+          <g
+            style="fill: var(--lbl); stroke: none"
+            font-family="Plus Jakarta Sans,sans-serif"
+            letter-spacing=".6"
+          >
+            <text
+              transform="translate(332 239) rotate(-45.0)"
+              text-anchor="middle"
+              font-size="16"
+              font-weight="600"
+            >
+              Castañares
+            </text>
+            <text
+              transform="translate(364 900) rotate(-45.0)"
+              text-anchor="middle"
+              font-size="16"
+              font-weight="600"
+            >
+              Miralla
+            </text>
+            <text
+              transform="translate(403 1116) rotate(-45.0)"
+              text-anchor="middle"
+              font-size="16"
+              font-weight="600"
+            >
+              Fonrouge
+            </text>
+            <text
+              transform="translate(867 1178) rotate(-45.0)"
+              text-anchor="middle"
+              font-size="18"
+              font-weight="700"
+            >
+              Fonrouge
+            </text>
+            <text
+              transform="translate(1639 406) rotate(-45.0)"
+              text-anchor="middle"
+              font-size="18"
+              font-weight="700"
+            >
+              Aquino
+            </text>
+            <text
+              transform="translate(191 1130) rotate(45.0)"
+              text-anchor="middle"
+              font-size="16"
+              font-weight="600"
+            >
+              Calou
+            </text>
+            <text
+              transform="translate(727 926) rotate(45.0)"
+              text-anchor="middle"
+              font-size="16"
+              font-weight="600"
+            >
+              Fonrouge
+            </text>
+            <text
+              transform="translate(670 707) rotate(45.0)"
+              text-anchor="middle"
+              font-size="18"
+              font-weight="700"
+            >
+              Corvalán
+            </text>
+            <text
+              transform="translate(728 294) rotate(45.0)"
+              text-anchor="middle"
+              font-size="16"
+              font-weight="600"
+            >
+              Fonrouge
+            </text>
+            <text
+              transform="translate(1007 430) rotate(45.0)"
+              text-anchor="middle"
+              font-size="16"
+              font-weight="600"
+            >
+              Sayos
+            </text>
+            <text
+              transform="translate(1286 254) rotate(45.0)"
+              text-anchor="middle"
+              font-size="16"
+              font-weight="600"
+            >
+              Pola
+            </text>
+            <text
+              transform="translate(1447 414) rotate(45.0)"
+              text-anchor="middle"
+              font-size="16"
+              font-weight="600"
+            >
+              Larraya
+            </text>
+            <text
+              transform="translate(1606 718) rotate(-12.0)"
+              text-anchor="middle"
+              font-size="14"
+              font-weight="600"
+            >
+              Calou
+            </text>
+            <text
+              transform="translate(1404 761) rotate(-12.0)"
+              text-anchor="middle"
+              font-size="14"
+              font-weight="600"
+            >
+              Unanué
+            </text>
+            <text
+              transform="translate(1479 1157) rotate(-12.0)"
+              text-anchor="middle"
+              font-size="15"
+              font-weight="700"
+            >
+              Unanué
+            </text>
+            <text
+              transform="translate(1252 1026) rotate(78.0)"
+              text-anchor="middle"
+              font-size="14"
+              font-weight="600"
+            >
+              Miralla
+            </text>
+            <text
+              transform="translate(1064 1037) rotate(-50.9)"
+              text-anchor="middle"
+              font-size="19"
+              font-weight="800"
+            >
+              Av. Riestra
+            </text>
+            <text
+              transform="translate(420 626) rotate(-78.8)"
+              text-anchor="middle"
+              font-size="19"
+              font-weight="800"
+            >
+              Au. Luis Dellepiane
+            </text>
+            <text
+              transform="translate(285 685) rotate(53.1)"
+              text-anchor="middle"
+              font-size="19"
+              font-weight="800"
+            >
+              Av. Larrazábal
+            </text>
+            <text
+              transform="translate(1050 677) rotate(-4.4)"
+              text-anchor="middle"
+              font-size="19"
+              font-weight="800"
+            >
+              Av. Argentina
+            </text>
+          </g>
+        </g>
+      </defs>
+    </svg>
+    <div id="loc">
+      <div class="lm">
+        <svg class="imap" viewBox="0 0 1800 1400" preserveAspectRatio="xMidYMid slice">
+          <use href="#mapg" />
+        </svg>
+        <div class="dim" id="fl"></div>
+        <div class="ld" id="ld">
+          <u></u><b></b
+          ><span class="hp"
+            ><svg viewBox="0 0 24 24">
+              <path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21Z" />
+              <circle cx="12" cy="9.5" r="2.5" /></svg
+            >Tu zona</span
+          >
+        </div>
+        <div class="cp">Ubicando tu zona…</div>
+      </div>
+      <div class="ringx" id="ringx"></div>
+      <button class="skip" id="skip">Saltar</button>
+    </div>
+    <canvas id="sky"></canvas>
+
+    <nav>
+      <div class="wrap">
+        <a class="logo" href="#inicio" aria-label="AlertAR"
+          ><img class="ico" src="assets/logo-icon.png" alt="" /><img
+            class="wm"
+            src="assets/logo-wordmark.png"
+            alt="AlertAR"
+        /></a>
+        <div class="links">
+          <a href="#inicio">Inicio</a><a href="#problema">Problemática</a
+          ><a href="#funciones">Funcionalidades</a><a href="#confianza">Confiabilidad</a>
+        </div>
+        <a class="btn sm" href="#descargar">Descargar app</a>
+      </div>
+    </nav>
+    <header class="hero" id="inicio">
+      <div class="wrap">
+        <div class="copy">
+          <span class="badge">Alertas oficiales + reportes de tu zona</span>
+          <h1>Las alertas de tu zona.<br />En un solo lugar. Al día.</h1>
+          <p class="lead">
+            AlertAR reúne alertas oficiales y reportes de tu comunidad, los ubica según dónde estás y te ayuda
+            a prepararte antes de que pase.
+          </p>
+        </div>
+        <div class="stage">
+          <div class="tilt" id="tilt">
+            <div class="ph p3">
+              <div class="sc">
+                <div class="slide on" data-k="alert">
+                  <img class="shot" src="assets/screens/alertas.png" alt="Alertas activas" />
+                </div>
+                <div class="slide" data-k="map">
+                  <img class="shot" src="assets/screens/mapa.png" alt="Mapa interactivo" />
+                </div>
+                <div class="slide" data-k="rep">
+                  <img class="shot" src="assets/screens/reportes.png" alt="Reportes ciudadanos" />
+                </div>
+                <div class="slide" data-k="bag">
+                  <img class="shot" src="assets/screens/mochila.png" alt="Mochila de prevención" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cap">
+            <span id="capt">Alertas activas</span>
+            <div class="dots" id="dots">
+              <button class="on" aria-label="Alertas activas"></button
+              ><button aria-label="Mapa interactivo"></button
+              ><button aria-label="Reportes ciudadanos"></button
+              ><button aria-label="Mochila de prevención"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="showsec">
+      <div class="wrap">
+        <div class="head">
+          <span class="badge">Explorá la app</span>
+          <h2>Mapa, alertas y prevención en tu bolsillo.</h2>
+        </div>
+        <div class="show" id="show"></div>
+      </div>
+    </section>
+
+    <section id="problema">
+      <div class="wrap">
+        <div class="head">
+          <span class="badge">Problemática y solución</span>
+          <h2>Informarse en una emergencia no debería ser otro problema.</h2>
+        </div>
+        <div class="duo">
+          <div class="pane glass">
+            <h3>La información está dispersa.</h3>
+            <p>
+              Entre sitios oficiales, redes y mensajes reenviados, cuesta saber qué es cierto y qué pasa en tu
+              zona.
+            </p>
+            <div class="chaos">
+              <span>Sitios oficiales</span><span>Redes sociales</span><span>Cadenas de mensajes</span
+              ><span>¿Y ahora qué hago?</span>
+            </div>
+          </div>
+          <div class="pane sol">
+            <h3>Una app, toda la información que necesitás.</h3>
+            <p>AlertAR centraliza los datos y los adapta a donde estás.</p>
+            <ul class="checks">
+              <li>Alertas oficiales en un solo lugar</li>
+              <li>Contexto según tu ubicación</li>
+              <li>Prevención para actuar a tiempo</li>
+              <li>Reportes ciudadanos diferenciados</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="funciones" style="padding-top: 20px">
+      <div class="wrap">
+        <div class="head">
+          <span class="badge">Funcionalidades</span>
+          <h2>Todo lo que necesitás, en un solo lugar.</h2>
+          <p>Cinco herramientas para informarte, avisarte y ayudarte a actuar.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="ic">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8" />
+                <path d="M10 20a2 2 0 0 0 4 0" />
+              </svg>
+            </div>
+            <h3>Alertas oficiales</h3>
+            <p>Avisos de organismos oficiales con vigencia y nivel de riesgo.</p>
+          </article>
+          <article class="card">
+            <div class="ic">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21Z" />
+                <circle cx="12" cy="9.5" r="2.5" />
+              </svg>
+            </div>
+            <h3>Mapa interactivo</h3>
+            <p>Alertas y reportes cerca tuyo, según tu ubicación.</p>
+          </article>
+          <article class="card">
+            <div class="ic">
+              <svg viewBox="0 0 24 24">
+                <circle cx="9" cy="8" r="3.5" />
+                <path d="M2.5 20a6.5 6.5 0 0 1 13 0" />
+                <path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6.5 6.5 0 0 1 3.5 6" />
+              </svg>
+            </div>
+            <h3>Reportes ciudadanos</h3>
+            <p>Contá lo que ves en tu barrio y mirá lo que reportan otros.</p>
+          </article>
+          <article class="card w">
+            <div class="ic">
+              <svg viewBox="0 0 24 24">
+                <rect x="5" y="8" width="14" height="13" rx="3" />
+                <path d="M9 8V6a3 3 0 0 1 6 0v2M9 14h6" />
+              </svg>
+            </div>
+            <h3>Mochila de prevención</h3>
+            <p>Armá tu mochila de emergencia con una lista guiada y marcá lo que ya tenés.</p>
+          </article>
+          <article class="card w">
+            <div class="ic">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7L12 3Z" />
+              </svg>
+            </div>
+            <h3>Recomendaciones</h3>
+            <p>Qué hacer antes, durante y después de cada tipo de emergencia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="confianza" style="padding-top: 20px">
+      <div class="wrap">
+        <div class="head">
+          <span class="badge">Confiabilidad</span>
+          <h2>Sabés de dónde viene cada dato.</h2>
+          <p>
+            La información oficial y los reportes de la comunidad nunca se mezclan: cada uno está
+            identificado.
+          </p>
+        </div>
+        <div class="duo">
+          <div class="lane off">
+            <span class="lb">Información oficial</span>
+            <h3>Datos de organismos oficiales</h3>
+            <p>Alertas publicadas por fuentes oficiales, con su vigencia y nivel de riesgo.</p>
+            <div class="srcs"><span>SMN</span><span>INA</span><span>Otros organismos</span></div>
+          </div>
+          <div class="lane glass cit">
+            <span class="lb">Reporte ciudadano</span>
+            <h3>Lo que ven tus vecinos</h3>
+            <p style="color: #b9cfdb">
+              Aportes de la comunidad, marcados como no oficiales para que decidas con criterio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dl" id="descargar">
+      <div class="wrap">
+        <span class="badge">Descargar app</span>
+        <h2>Preparate hoy, estás mejor mañana.</h2>
+        <p>Descargá AlertAR y recibí información clara y confiable de tu zona.</p>
+        <div class="stores">
+          <a class="store" href="#descargar"
+            ><svg viewBox="0 0 24 24">
+              <path d="M4 2.8v18.4c0 .4.4.6.7.4L20.5 12 4.7 2.4c-.3-.2-.7 0-.7.4Z" />
+            </svg>
+            <div><small>Disponible en</small><b>Google Play</b></div></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 AlertAR · Juntos, más preparados.</span>
+        <div class="fl">
+          <a href="#">Preguntas frecuentes</a><a href="#">Contacto</a><a href="#">Sobre el proyecto</a>
+        </div>
+      </div>
+    </footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>
